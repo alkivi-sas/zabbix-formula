@@ -21,7 +21,7 @@
 {% if salt['grains.get']('os_family') == 'Debian' -%}
 {% set new_repo = '' %}
 {%- if zabbix.version_repo|float > 7.0 %}
-{% set new_repo = '/release' %}
+{% set new_repo = '/stable' %}
 {% endif %}
 
 {{ id_prefix }}_apt-transport-https:
